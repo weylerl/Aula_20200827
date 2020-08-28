@@ -3,7 +3,7 @@ public class Conta {
 	
 	private int numero;
 	private Cliente cliente;
-	private Double saldo;
+	protected Double saldo;
 	
 	public Conta(int numero, Cliente cliente, Double saldo) {
 		super();
@@ -32,7 +32,10 @@ public class Conta {
 	}
 		
 	public void debita(double valor) {
-		this.saldo = this.saldo - valor;
+		if (valor > this.saldo) 
+			System.out.println("Saldo insuficiente!!");
+		else
+			this.saldo = this.saldo - valor;
 	}
 		
 

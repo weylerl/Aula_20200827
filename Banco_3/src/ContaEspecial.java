@@ -12,7 +12,13 @@ public class ContaEspecial extends Conta {
 		this.limite = limite;
 	}
 
-	@Override
+	public void debita(double valor) {
+		if (valor > (this.saldo + this.limite)) 
+			System.out.println("Saldo insuficiente!!");
+		else
+			this.saldo = this.saldo - valor;
+	}
+	
 	public String toString() {
 		return "ContaEspecial [limite=" + limite + ", toString()=" + super.toString() + "]";
 	}
