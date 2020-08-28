@@ -39,6 +39,13 @@ public class Banco {
 			cta.deposita(valor);
 	}
 	
+	public void debitaConta(int num, double valor) {
+		Conta cta = buscaConta(num);
+		if (cta == null)
+			System.out.println("Conta inexistente!!");
+		else
+			cta.debita(valor);
+	}
 	
 	public Conta buscaConta(int num) {
 		Conta c = null;
@@ -49,6 +56,5 @@ public class Banco {
 		    }
 		return c;
 	}
-	
 	
 }

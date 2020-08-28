@@ -12,11 +12,8 @@ public class Principal {
 		Cliente cli3 = new Cliente("Rita da Silva", "71373678949", new SimpleDateFormat("dd/MM/yyyy").parse("27/06/1980"));
 
 		Conta cta1 = new Conta(1,cli1);
-		Conta cta2 = new ContaEspecial(2, cli2, 300.00);
-		System.out.println(cta2.toString());
-		
+
 		banco.insereConta(cta1);
-		banco.insereConta(cta2);
 		
 		banco.cadastraCliente(cli1);
 		banco.cadastraCliente(cli2);
@@ -24,11 +21,11 @@ public class Principal {
 		
 		banco.listaClientes();
 		
-		//banco.depositaConta(1, 200.00);	
 		cta1.deposita(300.00);
-		System.out.println(banco.buscaConta(1).toString());
-		System.out.println(banco.buscaConta(2).toString());
+		cta1.deposita(200.00);
+		cta1.debita(50.00);
 		
+		System.out.println(banco.buscaConta(1).toString());
 	
 	}
 
