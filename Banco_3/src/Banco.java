@@ -46,6 +46,19 @@ public class Banco {
 		else
 			cta.debita(valor);
 	}
+
+	public void transferirDinheiro(int numOrigem, int numDestino, Double valor){
+		Conta ctaOrigem = buscaConta(numOrigem);
+		Conta ctaDestino = buscaConta(numDestino);
+
+		if(ctaOrigem.saldo < valor)
+			System.out.println("Saldo insuficiente!!");
+		else {
+			ctaOrigem.debita(valor);
+			ctaDestino.deposita(valor);
+			System.out.println("Transferencia de " + valor + "\nOrigem: "+  ctaOrigem.getCliente() + " \nDestino: " + ctaDestino.getCliente());
+		}
+	}
 	
 	public Conta buscaConta(int num) {
 		Conta c = contas
@@ -55,5 +68,7 @@ public class Banco {
 				.orElse(null);
 		return c;
 	}
+
+
 	
 }
