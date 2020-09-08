@@ -48,12 +48,11 @@ public class Banco {
 	}
 	
 	public Conta buscaConta(int num) {
-		Conta c = null;
-		for (Conta cta: contas)
-		    if (cta.getNumero() == num) {
-		    	c =  cta;
-		    	break;
-		    }
+		Conta c = contas
+				.stream()
+				.filter(conta -> conta.getNumero() == num)
+				.findAny()
+				.orElse(null);
 		return c;
 	}
 	
