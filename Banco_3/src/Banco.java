@@ -13,6 +13,10 @@ public class Banco {
 		this.contas = new ArrayList<Conta>();
 	}
 	
+	public String getNome() {
+		return nome;
+	}
+	
 	public void cadastraCliente(Cliente c) {
 		clientes.add(c);
 	}
@@ -56,5 +60,5 @@ public class Banco {
 		    }
 		return c;
 	}
-	
+
 }

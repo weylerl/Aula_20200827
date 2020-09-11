@@ -30,8 +30,9 @@ public class Principal {
 		cta2.deposita(500.00);
 		cta2.debita(1600.00);
 		
-		System.out.println(banco.buscaConta(1).toString());
-		System.out.println(banco.buscaConta(2).toString());
+		System.out.println(banco.buscaConta(1));
+		System.out.println(banco.buscaConta(2));
+		System.out.println(banco.buscaConta(3));
 	
 	}
 
