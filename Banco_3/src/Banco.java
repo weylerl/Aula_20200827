@@ -73,9 +73,4 @@ public class Banco {
 		return c;
 	}
 
-<<<<<<< HEAD
-=======
-
-	
->>>>>>> branch 'master' of https://github.com/weylerl/Aula_20200827.git
 }

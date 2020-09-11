@@ -29,14 +29,12 @@ public class Principal {
 		
 		cta2.deposita(500.00);
 		cta2.debita(1600.00);
-<<<<<<< HEAD
+
 		
 		System.out.println(banco.buscaConta(1));
 		System.out.println(banco.buscaConta(2));
 		System.out.println(banco.buscaConta(3));
 	
-=======
-
 		System.out.println(banco.buscaConta(1).toString());
 		System.out.println(banco.buscaConta(2).toString());
 
@@ -49,7 +47,6 @@ public class Principal {
 		System.out.println(cta1.saldo);
 		System.out.println(cta2.saldo);
 
->>>>>>> branch 'master' of https://github.com/weylerl/Aula_20200827.git
 	}
 
 }
