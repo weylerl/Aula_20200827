@@ -29,10 +29,19 @@ public class Principal {
 		
 		cta2.deposita(500.00);
 		cta2.debita(1600.00);
-		
+
 		System.out.println(banco.buscaConta(1).toString());
 		System.out.println(banco.buscaConta(2).toString());
-	
+
+//		Saldo antes da transferência
+		System.out.println(cta1.saldo);
+		System.out.println(cta2.saldo);
+
+		banco.transferirDinheiro(1, 2, 300.0);
+
+		System.out.println(cta1.saldo);
+		System.out.println(cta2.saldo);
+
 	}
 
 }
