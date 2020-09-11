@@ -14,7 +14,7 @@ public class ContaEspecial extends Conta {
 
 	public void debita(double valor) {
 		if (valor > (this.saldo + this.limite)) 
-			System.out.println("Saldo insuficiente!!");
+			System.out.println("Saldo insuficiente!");
 		else
 			this.saldo = this.saldo - valor;
 	}
